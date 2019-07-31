@@ -1,0 +1,235 @@
+/* Global Styles */
+:root {
+  --primary-color: #17a2b8;
+  --dark-color: #343a40;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Utilities */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+/* Text Styles*/
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+/* Padding */
+.p {
+  padding: 0.5rem;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.py {
+  padding: 0.5rem 0;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+/* Margin */
+.m {
+  margin: 0.5rem;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.my {
+  margin: 0.5rem 0;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--dark-color);
+  color: var(--light-color);
+  padding: 0.4rem 1.3rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--light-color);
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+  outline: none;
+  border-radius: 12px;
+}
+
+.btn-trans:hover {
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+.btn-blue:hover {
+  background: var(--dark-color);
+}
+
+/* Tables */
+table,
+th,
+td {
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  color: var(--light-color);
+}
+
+table {
+  width: 100%;
+}
+
+th {
+}
+
+td {
+}
+
+th,
+td {
+  padding: 15px 30px;
+  text-align: center;
+}
+
+/* Country */
+#info {
+  background-color: var(--dark-color);
+}
+
+.countries {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--light-color);
+}
+
+.countries-title-fr {
+  width: 33vw;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  position: relative;
+  background: url('./img/header.jpg') no-repeat center center/cover;
+  background-size: 100%;
+  height: 400px;
+}
+
+.header-inner {
+  color: #fff;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Form */
+form {
+}
+
+.form-group {
+  padding: 1rem 0;
+  display: flex;
+  width: 100%;
+  height: 0.7;
+  margin-bottom: 0.4rem;
+}
+
+.icon {
+  padding: 1rem;
+  background: var(--primary-color);
+  min-width: 2rem;
+  text-align: center;
+  color: var(--dark-color);
+}
+
+.form input {
+  width: 100%;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  outline: none;
+  color: #555;
+}
+
+.form button {
+  margin-top: 1.2rem;
+  width: 35%;
+  border: none;
+  padding: 0.5rem;
+  background: var(--primary-color);
+  font-size: 1rem;
+}

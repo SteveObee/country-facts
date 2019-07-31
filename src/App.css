@@ -1,33 +1,408 @@
-.App {
+/* Global Styles */
+:root {
+  --primary-color: #17a2b8;
+  --dark-color: #343a40;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Utilities */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+/* Text Styles*/
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.text-primary {
+  color: var(--primary-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text-dark {
+  color: var(--dark-color);
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
+/* Padding */
+.p {
+  padding: 0.5rem;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.py {
+  padding: 0.5rem 0;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+/* Margin */
+.m {
+  margin: 0.5rem;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.my {
+  margin: 0.5rem 0;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--dark-color);
+  color: var(--light-color);
+  padding: 0.4rem 1.3rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--light-color);
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+  outline: none;
+  border-radius: 12px;
+}
+
+.btn-trans:hover {
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+.btn-blue-label {
+  font-size: 1.2rem;
+}
+
+.btn-blue:hover {
+  background: var(--dark-color);
+}
+
+/* Tables */
+table,
+th,
+td {
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  color: var(--light-color);
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 15px 30px;
+  text-align: center;
+}
+
+/* Country */
+#info {
+  background-color: var(--dark-color);
+  /* min-height: 500px; */
+}
+
+.countries-list {
+  min-height: 320px;
+}
+
+.countries {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--light-color);
+}
+
+.countries-title-fr {
+  width: 33vw;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  position: relative;
+  background: url('./img/header.jpg') no-repeat center center/cover;
+  background-size: 100%;
+  padding: 4rem;
+  height: auto;
+}
+
+.header-inner {
+  color: #fff;
+  height: 100%;
+  width: 80%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Form */
+form {
+  margin-top: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-group {
+  padding: 1rem 0;
+  display: flex;
+  width: 100%;
+  height: 0.7;
+  margin-bottom: 0.4rem;
+}
+
+.icon {
+  padding: 1rem;
+  background: var(--primary-color);
+  min-width: 2rem;
+  text-align: center;
+  color: var(--dark-color);
+}
+
+.form input {
+  width: 100%;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  outline: none;
+  color: #555;
+}
+
+.form button {
+  margin-top: 1.2rem;
+  width: 35%;
+  border: none;
+  padding: 0.5rem;
+  background: var(--primary-color);
+  font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+  background: var(--dark-color);
+  height: calc(100vh - 60vh);
+}
+
+/* Pagination */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 2rem;
+  padding: 1rem 0;
+}
+
+.page-item,
+.page-item-inv {
+  display: inline;
+}
+
+.page-item span,
+.page-item-inv span {
+  text-decoration: none;
+  color: var(--light-color);
+  padding: 8px 14px;
+  border: 1px solid var(--light-color);
+  margin: 0 1px;
+}
+
+.page-item-inv span {
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+.page-item span,
+.page-item-inv span,
+.page-item span:hover,
+.page-item-inv span:hover {
+  cursor: pointer;
+}
+
+/* Spinner */
+.lds-spinner {
+  color: grey;
+  display: block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background: var(--dark-color);
+  margin: auto;
+}
+.lds-spinner div {
+  transform-origin: 32px 32px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 29px;
+  width: 5px;
+  height: 14px;
+  border-radius: 20%;
+  background: var(--light-color);
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 420px) {
+  .header {
+    background: #036;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .countries {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  .countries-title-fr {
+    width: auto;
+    padding: 0.8rem 0;
+  }
+
+  th,
+  td {
+    padding: 15px 8px;
+  }
+
+  .button {
+    padding: 0 3rem;
+  }
+
+  .form button {
+    padding: 0.5rem 1rem;
+    width: 60%;
+  }
+
+  .icon {
+    display: none;
   }
 }
